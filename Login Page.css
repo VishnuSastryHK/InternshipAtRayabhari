@@ -1,0 +1,68 @@
+ 
+div { background-color: white;
+    width: 300px;
+    border: 15px white;
+    padding: 50px;
+    margin: 5px;
+  border-radius: 10px;
+  position : relative;
+  box-shadow: 1px 3px 1px 0px #5d91f7;
+  
+  }
+  .email{
+    margin-bottom: 10px;
+  height:45;
+  width: 300px;
+  border:2px solid gainsboro;
+  border-radius:5px;
+  text-decoration: none;
+  padding-left:8px;
+  background-color: white;}
+  .pass{
+    margin-bottom: 17px;
+    height:45;
+    width: 300px;
+    border-radius:5px;
+    text-decoration:none;
+    background-color: white;
+    border:2px solid gainsboro;
+  padding-left: 8px;}
+  .login{
+  border-radius:5px;
+  background-color:  #5d91f7;
+  border: none;
+  color: white;
+  padding:15px 32px;
+  width:300px;
+  text-decoration: none;
+  margin:4px 2px;
+  cursor: pointer;
+  
+  }
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: #5d91f7;
+    opacity:0.8;
+  }
+  
+  .flex-container > div1{
+    background-color: #5d91f7;
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 10px;
+    color: white;
+    opacity: 0.8;
+  }
+
+  .p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 500px;
+  }
+  .error
+  {
+    color: red ;
+  }
