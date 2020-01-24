@@ -7,7 +7,7 @@
   <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
 
   <link rel="stylesheet" href="Registration Page.css">
-  <script src="RegistrationPage123.js"></script>
+  <script src="Registration Page.js"></script>
 </head>
 
 <body>
@@ -20,26 +20,28 @@
       <hr>
 
       <label for="name"><b>Name</b></label><br>
-      <input type="text" placeholder="Enter Name" id="1" name="name">
-      <div1 id="nameErrID"></div1>
+      <input type="text" placeholder="Enter Name" id="NAME" name="name"><br>
+      <div1 class ="error" id="nameErrID"></div1>
 
-      <br>
+      <br><br>
       <label for="email"><b>Email</b></label><br>
-      <input type="text" placeholder="Enter Email" id="email" name="email">
-      <div1 id="emailErrID"></div1>
+      <input type="text" placeholder="Enter Email" id="EMAIL" name="email"><br>
+      <div1 class="error" id="emailErrID"></div1>
 
-      <br>
-      <label for="psw"><b>Password</b></label><br>
-      <input type="password" placeholder="Enter Password" name="pwd"><br>
-      <div1 id="passErrID"></div1>
+      <br><br>
+      <label for="pwd"><b>Password</b></label><br>
+      <input type="password" placeholder="Enter Password" id="PWD" name="pwd"><br>
+      <div1 class="error" id="passErrID"></div1>
 
-      <label for="psw-repeat"><b>Repeat Password</b></label><br>
-      <input type="password" placeholder="Re-enter Password" name="cpwd"><br>
-      <div1 id="cpassErrID"></div1>
+      <br><br>
+      <label for="cpwd"><b>Repeat Password</b></label><br>
+      <input type="password" placeholder="Re-enter Password" id="CPWD" name="cpwd"><br>
+      <div1 class="error" id="cpErrID"></div1>
 
-      <hr>
+     <br>
+     <hr>
 
-      <button type="submit" class="registerbtn" onsubmit="validate()">Register</input>
+      <input type="submit" class="registerbtn" value="REGISTER" onclick="validation()"></input>
     </div>
 
     <div class="container signin">
