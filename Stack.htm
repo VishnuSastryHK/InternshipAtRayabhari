@@ -1,23 +1,65 @@
 <!DOCTYPE html>
-<head>
-    <title>Stack Demonstration</title>
-</head>
+<html>
 
-    <script src="Stack.js">
-        stackObj= new Stack();
+<body>
+
+    <h2>Stack New</h2>
+
+    <script>
+        class MyStack
+        {
+
+            constructor() 
+            {
+                this.stack = [];
+                this.top = -1
+            }
+
+            //tp=this.tp;
+            //st=this.st;
+
+            mypush()
+            {
+                let ele=document.getElementById("result").value;
+            
+                this.top = this.top+1;
+                this.stack[this.top]=ele;
+                //document.getElementById("demo").innerHTML=ele;
+                document.getElementById("result").value="";
+            }
+            mypop()
+            {
+                document.getElementById("result").value=this.stack[this.top];
+                this.top=this.top-1;
+
+            }
+
+            /*mydisplay()
+            {
+                //var top=this.top;
+                while(this.top>=0)
+                {
+                    document.getElementById("result").value=this.stack[this.top];
+                }
+            }*/
+
+
+            
+
+        }
+
+        obj = new MyStack(); 
+        
     </script>
 
-    <H1>Stack Demo</H1>
-
-    <input type="button" value="PUSH" onclick="stackObj.push()"><br><br>
-    <input type="button" value="POP" onclick="stackObj.pop()"><br><br>
-    <input type="button" value="Display Stack" onclick="stackObj.display()"><br><br>
     <input type="text" id="result">
+    <p id="demo"></p>
+    <br>
+    <input type="button" value="PUSH" onclick="obj.mypush()"><br>
+    <input type="button" value="POP" onclick="obj.mypop()"><br>
+    <input type="button" value="Display" onclick="obj.mydisplay()">
 
 
-
-
-
-    
 </body>
+
 </html>
