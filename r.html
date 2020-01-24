@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Method</h2>
+
+<p>Demonstration of how to add a method in a JavaScript Class.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor() {
+    this.carname = "FORD";
+  }
+  present() {
+    document.getElementById("result").value= "SD";
+  }
+}
+
+mycar = new Car();
+
+
+</script>
+
+<input type="text" id="result">
+<br>
+<input type="button" value="Click Me" onClick="mycar.present()">
+
+</body>
+</html>
