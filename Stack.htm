@@ -20,7 +20,7 @@
             mypush() {
 
                 if (this.top == this.size) {
-                    document.getElementById("demo").innerHTML = "Stack is Full.";
+                    document.getElementById("demo").innerHTML = "*Stack is Full.";
                 }
                 else {
 
@@ -30,7 +30,7 @@
                     for (i = 0; i <= this.size; i++) {
                         if (ele == this.stack[i]) 
                         {
-                            document.getElementById("demo").innerHTML = "Element already exists on stack";
+                            document.getElementById("demo").innerHTML = "*Element already exists on stack";
                             flag = false;
                         }
                     }
@@ -48,7 +48,7 @@
             mypop() {
                 if (this.top == -1) 
                 {
-                    document.getElementById("demo").innerHTML = "Stack is Empty.";
+                    document.getElementById("demo").innerHTML = "*Stack is Empty.";
                 }
                 else 
                 {
@@ -59,9 +59,16 @@
 
             }
 
-            mydisplay() {
-
-                document.getElementById("demo").innerHTML = this.stack;
+            mydisplay() 
+            {   
+                document.getElementById("result").value=""
+                var i=0;
+                while(i<=this.top)
+                {
+                                    
+                document.getElementById("result").value += this.stack[i]+",";
+                i++;
+                }
 
             }
 
