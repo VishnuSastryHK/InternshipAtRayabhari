@@ -6,57 +6,79 @@
     <h2>Stack New</h2>
 
     <script>
-        class MyStack
-        {
+        class MyStack {
 
-            constructor() 
-            {
-                this.stack = [];
-                this.top = -1
+            constructor() {
+                this.stack = [5];
+                this.top = -1;
+                this.size = 4;
             }
 
             //tp=this.tp;
             //st=this.st;
 
-            mypush()
-            {
-                let ele=document.getElementById("result").value;
-            
-                this.top = this.top+1;
-                this.stack[this.top]=ele;
-                //document.getElementById("demo").innerHTML=ele;
-                document.getElementById("result").value="";
-            }
-            mypop()
-            {
-                document.getElementById("result").value=this.stack[this.top];
-                this.top=this.top-1;
+            mypush() {
 
-            }
-
-            /*mydisplay()
-            {
-                //var top=this.top;
-                while(this.top>=0)
-                {
-                    document.getElementById("result").value=this.stack[this.top];
+                if (this.top == this.size) {
+                    document.getElementById("demo").innerHTML = "Stack is Full.";
                 }
-            }*/
+                else {
+
+                    let ele = document.getElementById("result").value;
+                    var i = 0;
+                    var flag=true;
+                    for (i = 0; i <= this.size; i++) {
+                        if (ele == this.stack[i]) 
+                        {
+                            document.getElementById("demo").innerHTML = "Element already exists on stack";
+                            flag = false;
+                        }
+                    }
+
+                    if (flag == true) 
+                    {
+                        this.top = this.top + 1;
+                        this.stack[this.top] = ele;
+                        //document.getElementById("demo").innerHTML=ele;
+                        document.getElementById("result").value = "";
+                    }
+                }
+            }
+
+            mypop() {
+                if (this.top == -1) 
+                {
+                    document.getElementById("demo").innerHTML = "Stack is Empty.";
+                }
+                else 
+                {
+
+                    document.getElementById("result").value = this.stack[this.top];
+                    this.top = this.top - 1;
+                }
+
+            }
+
+            mydisplay() {
+
+                document.getElementById("demo").innerHTML = this.stack;
+
+            }
 
 
-            
+
 
         }
 
-        obj = new MyStack(); 
-        
+        obj = new MyStack();
+
     </script>
 
     <input type="text" id="result">
     <p id="demo"></p>
     <br>
-    <input type="button" value="PUSH" onclick="obj.mypush()"><br>
-    <input type="button" value="POP" onclick="obj.mypop()"><br>
+    <input type="button" value="PUSH" onclick="obj.mypush()"><br><br>
+    <input type="button" value="POP" onclick="obj.mypop()"><br><br>
     <input type="button" value="Display" onclick="obj.mydisplay()">
 
 
