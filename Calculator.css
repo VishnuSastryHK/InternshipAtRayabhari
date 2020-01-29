@@ -1,0 +1,77 @@
+input[type="button"]
+{
+    color:black;
+    background-color: white;
+    border: #e6e6e6;
+    width: 100%;
+    height: 61px;
+    font-size: 17px;
+    font-weight: bold;
+
+}
+input[type="button"]:hover
+{
+    background-color: #d6d6d6;
+    width: 100%;
+}
+input[type="buttonE"]
+{
+    color:black;
+    background-color: #72a1c8;
+    border: #e6e6e6;
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    text-align: center;
+
+}
+input[type="buttonE"]:hover
+{
+    background-color: #4599db;
+    width: 100%;
+}
+input[type="buttonO"]
+{
+    color:black;
+    background-color: #f6f6f6;
+    border: #e6e6e6;
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    
+    text-align: center;
+
+}
+input[type="buttonO"]:hover
+{
+    background-color: #d6d6d6;
+    width: 100%;
+}
+
+
+input[type="text"]
+{
+    background-color: #e6e6e6;
+    color: black;
+    height: 170px;
+    width: 100%;
+    border: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+table
+{
+    border-collapse: collapse;
+}
+td,th
+{
+    
+    width: 120px;
+}
+#td1
+{
+    border: none;
+    border: solid #e6e6e6 1px;
+}
+
+

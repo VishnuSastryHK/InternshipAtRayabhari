@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>My Calc</title>
+    <script src="./Calculator.js">
+    </script>
+        <link rel="stylesheet" href="Calculator.css" >
+</head>
+
+<body bgcolor="#e6e6e6">
+    
+    <div>
+        <p id="demo"></p>
+        <table>
+        <tr>
+            <td id="td1" colspan="4" ><input type="text" id="result"></td>
+        </tr>
+        <tr>
+            <td><input type="buttonO" value="%" ></td>
+            <td><input type="buttonO" value="CE" onclick="obj.clear()"></td>
+            <td><input type="buttonO" value="C" onclick="obj.clear()"></td>
+            <td><input type="buttonO" value="&#9003" onclick="obj.backspace()"></td>
+        </tr>
+        <tr>
+            <td><input type="buttonO" value="1/x" onclick="obj.inverse()"></td>
+            <td><input type="buttonO" value="x&sup2;" onclick="obj.square()"></td>
+            <td><input type="buttonO" value="&sup2&radic;x" onclick="obj.squareroot()"></td>
+            <td><input type="buttonO" value="&div;" onclick="obj.display('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="obj.display('7')"></td>
+            <td><input type="button" value="8" onclick="obj.display('8')"></td>
+            <td><input type="button" value="9" onclick="obj.display('9')"></td>
+            <td><input type="buttonO" value="x" onclick="obj.display('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="obj.display('4')"></td>
+            <td><input type="button" value="5" onclick="obj.display('5')"></td>
+            <td><input type="button" value="6" onclick="obj.display('6')"></td>
+            <td><input type="buttonO" value="-" onclick="obj.display('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="obj.display('1')"></td>
+            <td><input type="button" value="2" onclick="obj.display('2')"></td>
+            <td><input type="button" value="3" onclick="obj.display('3')"></td>
+            <td><input type="buttonO" value="+" onclick="obj.display('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="+/-" ></td>
+            <td><input type="button" value="0" onclick="obj.display('0')"></td>
+            <td><input type="button" value="." onclick="obj.display('.')"></td>
+            <td><input type="buttonE" value="=" onclick="obj.solve()"></td>
+        </tr>
+        </table> 
+       </div>
+
+
+
+
+
+</body>
