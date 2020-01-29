@@ -8,7 +8,7 @@ class MyCalculator {
     backspace() {
         var value = document.getElementById("result").value;
         document.getElementById("result").value = value.substr(0, value.length - 1);
-        obj.mypop();
+        //obj.mypop();
     }
 
     clear() {
@@ -36,7 +36,9 @@ class MyCalculator {
             this.operand = ""
         }
     }*/
-    storeOperand(str) {
+    storeOperand(str) 
+    {
+        //var invalidInput=true;
         console.log(str)
         var n = str.length;
         var y = 0, lastOperand = "";
@@ -51,6 +53,7 @@ class MyCalculator {
                 obj.mypush(lastOperand);
                 console.log(this.stack)
                 lastOperand="";
+                //invalidInput=false;
 
             }
             else 
@@ -80,11 +83,16 @@ class MyCalculator {
                     console.log(this.stack)
                     y = i + 1;
                     this.operand = ""
+                    //invalidInput=false
                 }
             }
 
             i++;
         }
+       /* if(invalidInput==true)
+        {
+            document.getElementById("result").value="Invalid Input"
+        }*/
     }
 
 
@@ -120,7 +128,9 @@ class MyCalculator {
                 }
         */
 
-    inverse() {
+
+    inverse() 
+    {
         var x = document.getElementById("result").value;
         document.getElementById("result").value = 1 / x;
     }
@@ -146,7 +156,8 @@ class MyCalculator {
         document.getElementById("demo").innerHTML=postfix;
         this.stack=[];
         */
-        obj.storeOperand(document.getElementById("result").value + "=");
+        var string=document.getElementById("result").value+"=";
+        obj.storeOperand(string);
         console.log(this.stack)
         document.getElementById("result").value = ""
         var postfix = obj.infix_postfix(this.stack);
@@ -154,7 +165,16 @@ class MyCalculator {
         var result = obj.evaluationOfPostfix(postfix);
         console.log(result)
 
+        if(isNaN(result)==true)
+        {
+            document.getElementById("result").value = "Invalid Input";
+
+        }
+        else
+        {
         document.getElementById("result").value = result;
+        obj.displayHistory(string+result,string);
+        }
         obj.clearStack();
         console.log(this.stack)
         obj.mypush(result);
@@ -275,6 +295,18 @@ class MyCalculator {
         
     }
 
+    displayHistory(stringPlusResult,string)
+    {   
+        console.log(string)
+        var displayString= document.createElement("button");
+        displayString.innerHTML=stringPlusResult;
+
+        var element = document.getElementById("divH");
+        element.appendChild(displayString);
+
+    }
+
+
 
 
 
@@ -286,3 +318,4 @@ class MyCalculator {
 
 
 obj = new MyCalculator();
+
